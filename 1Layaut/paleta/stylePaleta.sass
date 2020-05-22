@@ -1,0 +1,53 @@
+/* EJERCICIO: Ejercicio 1: Crear una paleta de colores dinámica.*/
+// variables cajas
+$colorBaseOne: #1DB38C
+$colorBaseTwo: #FE4164
+$colorBaseThree: #A3FF4F 
+
+// @mixin
+@mixin colorBox( $basecolor) 
+    @for $i from 1 through 4
+        .box:nth-child(5n - #{$i})
+            background-color: darken($basecolor, $i * 10%)
+
+        .box:nth-child(5n + #{$i})
+            &:nth-child(n+5)
+                background-color: lighten($basecolor, $i * 8%)
+
+.paleta
+    display: flex
+    flex-direction: row
+
+.box
+    height: 180px
+    width: 100%
+    border-radius: 10px
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 1%
+
+
+
+.generalContainer
+    :nth-child(1)
+        @include colorBox($colorBaseOne)
+        .base-color
+            background-color: $colorBaseOne
+    :nth-child(2)
+        @include colorBox($colorBaseTwo)
+        .base-color
+            background-color: $colorBaseTwo
+    :nth-child(3)
+        @include colorBox($colorBaseThree)
+        .base-color
+            background-color: $colorBaseThree
+
+
+ 
+
+
+
+ 
+
+   
