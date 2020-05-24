@@ -1,0 +1,93 @@
+body {
+  font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
+}
+body .header h1 {
+  background-color: #49868C;
+  color: #f7f7f7;
+  margin: 3px;
+  padding: 3rem;
+}
+body .header h2 {
+  background-color: #A0D9D9;
+  color: #f7f7f7;
+  margin: 3px;
+  padding: 1rem;
+}
+body .footer {
+  width: 100%;
+}
+body .footer :nth-child(1) {
+  height: 50px;
+  background-color: #49868C;
+  margin: 3px;
+}
+body .footer :nth-child(2) {
+  height: 50px;
+  background-color: #A0D9D9;
+}
+body #layaut {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1rem;
+}
+body #layaut img {
+  width: 100%;
+  height: auto;
+}
+body #layaut .enunc {
+  grid-column: span 3;
+  grid-row: span 3;
+  background-color: #A62D2D;
+}
+body #layaut .enunc h3 {
+  color: white;
+  font-size: 3rem;
+  padding: 1rem;
+}
+body #layaut .enunc h2 {
+  font-size: 3rem;
+  margin: 1rem;
+}
+body #layaut :nth-child(2) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+body #layaut :nth-child(2) p {
+  text-align: center;
+}
+body #layaut :nth-child(3) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+body #layaut :nth-child(3) img {
+  width: 144%;
+}
+body #layaut :nth-child(3) p {
+  font-size: 2rem;
+}
+body #layaut :nth-child(4) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+body #layaut :nth-child(5) {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+body #layaut :nth-child(6) {
+  grid-column: span 6;
+  grid-row: span 1;
+}
+body #layaut .title {
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: bold;
+  color: #A0D9D9;
+}
+body #layaut .ejerc {
+  transition: all 0.5s ease-in-out;
+}
+body #layaut .ejerc:hover {
+  transform: scale(1.1);
+}
+
+/*# sourceMappingURL=style.css.map */

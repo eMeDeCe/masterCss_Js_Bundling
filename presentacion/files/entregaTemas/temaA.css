@@ -1,0 +1,33 @@
+.text :first-child {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.text :last-child {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.box {
+  border-radius: 3px;
+}
+
+.container-box {
+  background-color: #ffbf0093;
+  box-shadow: 3px 3px 6px #b09d03, 0 0 25px #ecd202, 0 0 5px #ffe82a;
+}
+
+.base {
+  background-color: #ffbf00;
+}
+
+.important {
+  background-color: #ffbf0093;
+}
+
+.warning {
+  background-color: #ffe492e2;
+}
+
+.shadow {
+  box-shadow: 10px 10px 10px 2px #5c5a5a;
+}
+
+/*# sourceMappingURL=temaA.css.map */

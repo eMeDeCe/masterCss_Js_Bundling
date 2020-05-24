@@ -1,0 +1,34 @@
+.text :first-child {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.text :last-child {
+  font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
+}
+
+.box {
+  border-radius: 10px;
+}
+
+.container-box {
+  border-radius: 10px;
+  background-color: #1500ff;
+  box-shadow: 3px 3px 6px #0312b893, 0 0 25px #1500ff, 0 0 5px #9da0fee2;
+}
+
+.base {
+  background-color: #1500ff;
+}
+
+.important {
+  background-color: #0312b893;
+}
+
+.warning {
+  background-color: #9da0fee2;
+}
+
+.shadow {
+  box-shadow: -10px 10px 10px 2px #5c5a5a;
+}
+
+/*# sourceMappingURL=temaB.css.map */

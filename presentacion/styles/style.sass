@@ -1,0 +1,95 @@
+$firstColor : #49868C
+$secondColor: #A0D9D9
+$thirdColor: #A62D2D
+$white: #f7f7f7
+$black :  #162021
+body
+    font-family: "Gill Sans Extrabold", Helvetica, sans-serif
+    //margin: 1rem
+
+    .header
+        h1
+            background-color: $firstColor
+            color: $white
+            margin: 3px
+            padding: 3rem
+        h2 
+            background-color: $secondColor
+            color: $white
+            margin: 3px
+            padding: 1rem
+    
+    .footer
+        width: 100%
+        :nth-child(1)
+            height: 50px
+            background-color: $firstColor
+            margin: 3px
+        :nth-child(2)
+            height: 50px
+            background-color: $secondColor
+
+    #layaut
+        display: grid
+        grid-template-columns: repeat(6, 1fr)
+        grid-gap: 1rem
+
+        img 
+            width: 100%
+            height: auto
+
+
+        .enunc
+            grid-column: span 3
+            grid-row: span 3
+            background-color: $thirdColor
+            h3
+                color: white
+                font-size: 3rem
+                padding: 1rem 
+            h2
+                font-size: 3rem
+                margin: 1rem
+
+        :nth-child(2)
+            grid-column: span 1
+            grid-row: span 1
+            p
+                text-align: center
+
+        :nth-child(3)
+            grid-column: span 1
+            grid-row: span 1
+            img
+                width: 144%
+            p
+                font-size: 2rem
+               
+         
+
+        :nth-child(4)
+            grid-column: span 1
+            grid-row: span 1
+        
+        :nth-child(5)
+            grid-column: span 3
+            grid-row: span 2
+        
+        :nth-child(6)
+            grid-column: span 6
+            grid-row: span 1
+            p
+            
+
+        .title
+            text-decoration: none
+            font-size: 2em
+            font-weight: bold
+            color: $secondColor
+        
+        .ejerc 
+            transition: all .5s ease-in-out
+            &:hover
+                transform: scale(1.1)
+        
+

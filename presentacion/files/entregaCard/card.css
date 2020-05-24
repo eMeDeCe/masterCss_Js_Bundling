@@ -1,0 +1,49 @@
+.container {
+  display: grid;
+  padding: 1rem;
+  grid-gap: 1rem;
+  grid-template-columns: 300px;
+  grid-template-rows: 660px;
+  font-family: "Times New Roman", Times, serif;
+}
+.container .card {
+  background-color: #b9e8fa;
+  color: white;
+  padding: 0.8rem 1.5rem 0.5rem 1.5rem;
+}
+.container img {
+  width: 100%;
+}
+.container .info {
+  background-color: white;
+  border: 1px solid #637b85;
+}
+.container .text {
+  padding: 6px;
+}
+.container .text .title {
+  font-size: 2rem;
+  color: #313638;
+}
+.container .text .description {
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #5c6468;
+  margin-bottom: 2rem;
+}
+.container .text .date {
+  text-align: right;
+  color: #5c6468;
+}
+.container .text .date span {
+  color: #96a1a7;
+}
+.container .text .button {
+  padding: 1rem;
+  text-align: center;
+  background-color: #61a755;
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=card.css.map */

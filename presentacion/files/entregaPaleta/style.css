@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/* EJERCICIO: Ejercicio 1: Crear una paleta de colores dinámica.*/
+.paleta {
+  display: flex;
+  flex-direction: row;
+}
+
+.box {
+  height: 180px;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1%;
+}
+
+.generalContainer :nth-child(1) .box:nth-child(5n-1) {
+  background-color: #16876a;
+}
+.generalContainer :nth-child(1) .box:nth-child(5n+1):nth-child(n+5) {
+  background-color: #23d6a7;
+}
+.generalContainer :nth-child(1) .box:nth-child(5n-2) {
+  background-color: #0f5b47;
+}
+.generalContainer :nth-child(1) .box:nth-child(5n+2):nth-child(n+5) {
+  background-color: #41e0b7;
+}
+.generalContainer :nth-child(1) .box:nth-child(5n-3) {
+  background-color: #082f25;
+}
+.generalContainer :nth-child(1) .box:nth-child(5n+3):nth-child(n+5) {
+  background-color: #64e6c4;
+}
+.generalContainer :nth-child(1) .box:nth-child(5n-4) {
+  background-color: #010303;
+}
+.generalContainer :nth-child(1) .box:nth-child(5n+4):nth-child(n+5) {
+  background-color: #88ecd2;
+}
+.generalContainer :nth-child(1) .base-color {
+  background-color: #1DB38C;
+}
+.generalContainer :nth-child(2) .box:nth-child(5n-1) {
+  background-color: #fe0e3b;
+}
+.generalContainer :nth-child(2) .box:nth-child(5n+1):nth-child(n+5) {
+  background-color: #fe6a85;
+}
+.generalContainer :nth-child(2) .box:nth-child(5n-2) {
+  background-color: #d80129;
+}
+.generalContainer :nth-child(2) .box:nth-child(5n+2):nth-child(n+5) {
+  background-color: #fe92a6;
+}
+.generalContainer :nth-child(2) .box:nth-child(5n-3) {
+  background-color: #a5011f;
+}
+.generalContainer :nth-child(2) .box:nth-child(5n+3):nth-child(n+5) {
+  background-color: #ffbbc7;
+}
+.generalContainer :nth-child(2) .box:nth-child(5n-4) {
+  background-color: #720116;
+}
+.generalContainer :nth-child(2) .box:nth-child(5n+4):nth-child(n+5) {
+  background-color: #ffe3e8;
+}
+.generalContainer :nth-child(2) .base-color {
+  background-color: #FE4164;
+}
+.generalContainer :nth-child(3) .box:nth-child(5n-1) {
+  background-color: #88ff1c;
+}
+.generalContainer :nth-child(3) .box:nth-child(5n+1):nth-child(n+5) {
+  background-color: #b8ff78;
+}
+.generalContainer :nth-child(3) .box:nth-child(5n-2) {
+  background-color: #6fe800;
+}
+.generalContainer :nth-child(3) .box:nth-child(5n+2):nth-child(n+5) {
+  background-color: #ceffa1;
+}
+.generalContainer :nth-child(3) .box:nth-child(5n-3) {
+  background-color: #56b500;
+}
+.generalContainer :nth-child(3) .box:nth-child(5n+3):nth-child(n+5) {
+  background-color: #e3ffc9;
+}
+.generalContainer :nth-child(3) .box:nth-child(5n-4) {
+  background-color: #3e8200;
+}
+.generalContainer :nth-child(3) .box:nth-child(5n+4):nth-child(n+5) {
+  background-color: #f8fff2;
+}
+.generalContainer :nth-child(3) .base-color {
+  background-color: #A3FF4F;
+}
+
+/*# sourceMappingURL=style.css.map */
