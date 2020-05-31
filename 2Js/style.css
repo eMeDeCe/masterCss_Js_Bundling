@@ -1,0 +1,12 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+span {
+    color: red;
+    font-size: 20px;
+}
+
+.terminar {
+    color: green;
+}
