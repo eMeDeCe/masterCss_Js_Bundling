@@ -1,4 +1,4 @@
-import namePets from "./lovePets"; // Alias name
+import namePets from "../lovePets"; // Alias name
 
 const pets = namePets("Apache") ;
 

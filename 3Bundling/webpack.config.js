@@ -1,26 +1,41 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const webpack = require('webpack');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require("path");
+
+const basePath = __dirname;
 
 module.exports = {
-    entry: {
-        app: [
-           // "./students.js",
-            "./pets.js"   
-        ],
-        appStyles: ["./mystyles.scss"],
-        vendorStyles: ['./node_modules/bootstrap/dist/css/bootstrap.css']
-      },
-    
-      output: {
-        filename: "[name].[chunkhash].js"
-      },
+  context: path.join(basePath, "src"),
+  entry: {
+    app: ["./index.js", "./pets.js"],
+    appStyles: ["./mystyles.scss"],
+    vendorStyles: ["../node_modules/bootstrap/dist/css/bootstrap.css"]
+  },
+
+  output: {
+    filename: "[name].[chunkhash].js"
+  },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: "babel-loader"
+      },
+      {
+        test: /\.(png|jpg)$/,
+        exclude: /node_modules/,
+        use: {
+            loader: 'url-loader',
+            options: {
+              limit: 5000,
+              name: './img/[hash].[name].[ext]',
+            },
+          },
+      },
+      {
+        test: /\.html$/,
+        loader: 'html-loader',
       },
       {
         test: /\.scss$/,
@@ -33,15 +48,12 @@ module.exports = {
             options: {
               implementation: require("sass")
             }
-          },
+          }
         ]
       },
       {
         test: /\.css$/,
-        use: [
-            MiniCssExtractPlugin.loader,
-            "css-loader"
-        ]
+        use: [MiniCssExtractPlugin.loader, "css-loader"]
       }
     ]
   },
@@ -54,6 +66,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css"
-    }),
+    })
   ]
 };
