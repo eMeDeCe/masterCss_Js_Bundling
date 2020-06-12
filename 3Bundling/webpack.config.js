@@ -8,7 +8,7 @@ module.exports = {
            // "./students.js",
             "./pets.js"   
         ],
-        appStyles: ["./mystyles.css"],
+        appStyles: ["./mystyles.scss"],
         vendorStyles: ['./node_modules/bootstrap/dist/css/bootstrap.css']
       },
     
@@ -23,8 +23,21 @@ module.exports = {
         loader: "babel-loader"
       },
       {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              implementation: require("sass")
+            }
+          },
+        ]
+      },
+      {
         test: /\.css$/,
-       // exclude: /node_modules/,
         use: [
             MiniCssExtractPlugin.loader,
             "css-loader"
