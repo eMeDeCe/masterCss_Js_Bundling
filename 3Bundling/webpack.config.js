@@ -48,13 +48,14 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader",
           {
-            loader: "sass-loader",
+            loader: 'css-loader',
             options: {
-              implementation: require("sass")
-            }
-          }
+                modules: {
+                localIdentName: '[name]__[local]__[hash:base64:5]',
+              },
+            },
+          },
         ]
       },
       {
