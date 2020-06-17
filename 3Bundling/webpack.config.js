@@ -14,7 +14,7 @@ module.exports = {
   },
   entry: {
     app: ["./pets.js", "./index.jsx"],
-    appStyles: ["./mystyles.scss"],
+    appStyles: ["./mystyles.global.scss"],
     vendorStyles: ["../node_modules/bootstrap/dist/css/bootstrap.css"]
   },
 
@@ -22,26 +22,12 @@ module.exports = {
     filename: "[name].[chunkhash].js"
   },
   module: {
+    
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: "babel-loader"
-      },
-      {
-        test: /\.(png|jpg)$/,
-        exclude: /node_modules/,
-        use: {
-            loader: 'url-loader',
-            options: {
-              limit: 5000,
-              name: './img/[hash].[name].[ext]',
-            },
-          },
-      },
-      {
-        test: /\.html$/,
-        loader: 'html-loader',
       },
       {
         test: /\.scss$/,
@@ -49,18 +35,44 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader',
+            loader: "css-loader",
+          },
+          {
+            loader: "sass-loader",
             options: {
-                modules: {
-                localIdentName: '[name]__[local]__[hash:base64:5]',
+              implementation: require("sass")
+            }
+          }
+        ],
+        include: /\.global\.scss$/,
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                localIdentName: "[name]__[local]__[hash:base64:5]",
               },
             },
           },
-        ]
+        ],
+        exclude: /\.global\.scss$/,
       },
       {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"]
+      },
+      {
+        test: /\.(png|jpg)$/,
+        exclude: /node_modules/,
+        loader: "url-loader?limit=5000"
+      },
+      {
+        test: /\.html$/,
+        loader: "html-loader"
       }
     ]
   },
