@@ -16,7 +16,6 @@ module.exports = {
     app: "./index.tsx",
     appStyles: ["./mystyles.global.scss"],
   },
-  stats: "errors-only",
 
   output: {
     filename: "[name].[chunkhash].js"
