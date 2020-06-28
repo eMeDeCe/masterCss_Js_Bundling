@@ -1,0 +1,25 @@
+$blue-color:#8ed5fa;
+$font : "Lucida Console", Courier, monospace;
+
+.title {
+    font-family: $font;
+    margin-left: 1rem;
+    background-color: $blue-color;
+}
+
+#myTest {
+    font-family: $font;
+    padding-left: 4rem;
+    font-size: 4rem;
+}
+
+img {
+    display: block;
+    width: 200px;
+}
+
+.content {    
+    display: flex;
+    align-items: center;
+    border: solid $blue-color 1px;
+}
