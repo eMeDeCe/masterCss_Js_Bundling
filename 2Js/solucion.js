@@ -2,7 +2,7 @@
 Ejercicios laboratorio 2JS MASTER LEMON CODE 2020.
 */
 /* CONCEPTOS: 
- -inmutable: na función inmutable es aquella que no modifica el valor sobre el que la estamos aplicando.
+ -inmutable: una función inmutable es aquella que no modifica el valor sobre el que la estamos aplicando.
  - prototype: todos los objetos heredan métodos y propiedades de Object.prototype, aunque pueden ser sobrecargados.
  - Con las array f vienen implicitas los return si hay {} es imprescindible el retunr
 */
@@ -72,6 +72,15 @@ const concat2 = function ( a, b) {
 };
 console.log("concat2 >> ", concat2(arrayPrueba, array2));
 
+const concat3 = (...arrays) => {
+    let nuevoArray = [];
+    for (let array of arrays) {
+        nuevoArray = [...nuevoArray, ...array];
+    }
+    return nuevoArray;
+}
+console.log("concat3 >> ", concat3(arrayPrueba, array2, array3));
+
 //opcional
 const concatOpcional = (...arrays) => {
     let newArray = [];
@@ -90,9 +99,22 @@ const clone = function (source) {
 const clone2 = (source) => Object.assign(source);
 const cloneObject = clone(objetoPrueba);
 
+function clone3 (obj) {
+    let result = obj instanceof Array ? [ ...obj ] : typeof obj === 'object' ? {...obj} : false;
+    if (result !== false) {
+        for (let prop of Reflect.ownKeys (result)) {
+            result[ prop ] = clone (result[ prop ]);
+        }
+        return result;
+    }
+  }
+
+const o = clone(objetoPrueba);
+
 console.log("clone1 >>", clone(objetoPrueba));
 console.log("clone2 >>", clone2(objetoPrueba));
 console.log("clone3 >>", Object.assign({}, objetoPrueba));
+console.log("clone4 >>", clone3(objetoPrueba));
 
 
 // Merge
