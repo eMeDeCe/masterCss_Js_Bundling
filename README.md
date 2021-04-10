@@ -1,4 +1,4 @@
-# Practicas Maquetacion, Lenguajes y Bundler de Master Lemon Code 8 2020/2021
+# Practicas Maquetacion, Lenguajes y Bundling de Master Lemon Code 8 2020/2021
 ## Layout
 
 Ejercicio 1
